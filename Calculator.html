@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FauxEco</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts/calculator.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/iceberglogo.png" alt="FauxEco Logo" class="logo">
+            <h1>FauxEco</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Introduction</a></li>
+                <li><a href="Calculator.html">Carbon Footprint Calculator</a></li>
+                <li><a href="Explanation.html">Argumentation of Design</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Guide</h2>
+        <p>Welcome to our carbon footprint calculator! Follow the steps below and the calculator will rate your sustainable behavior.</p>
+        <ol>
+            <li>Select all the options that apply to you.</li>
+            <li>When you are ready press on "Calculate" to see how sustainable you really are!</li>
+        </ol>
+    </section>
+
+    <section id="calculator">
+        <h2>Carbon Footprint Calculator</h2>
+        <input type="text" id="entry" placeholder="Select the options that apply to you" readonly/>
+        <div id="result"></div>
+        <div id="buttons">
+            <button onclick="appendToEntry('Flight')">Flight</button>
+            <button onclick="appendToEntry('Car')">Car</button>
+            <button onclick="appendToEntry('Bike')">Bike</button>
+            <button onclick="appendToEntry('Train')">Train</button>
+            <button onclick="appendToEntry('Ate Meat')">Ate Meat</button>
+            <button onclick="appendToEntry('Vegan Diet')">Vegan Diet</button>
+            <button onclick="appendToEntry('Energy Waste')">Energy Waste</button>
+            <button onclick="appendToEntry('Air Conditioning')">Air Conditioning</button>
+            <button onclick="appendToEntry('Lowers ambient temperature')">Lowers ambient temperature</button>
+            <button onclick="appendToEntry('Plastic Bag')">Plastic Bag</button>
+            <button onclick="appendToEntry('Composting')">Composting</button>
+            <button onclick="appendToEntry('Reusable Cups')">Reusable Cups</button>
+            <button onclick="appendToEntry('Recycling')">Recycling</button>
+            <button onclick="appendToEntry('Littering')">Littering</button>
+            <button onclick="appendToEntry('Plastic Waste')">Plastic Waste</button>
+            <button class="clear" onclick="clearEntry()">Clear</button>
+            <button class="calculate" onclick="calculate()">Calculate</button>
+        </div>
+        <p id="purchase" style="display: none;">Read Information Below</p>
+    </section>
+
+    <section id="bottom-text">
+        <h2>Background Information</h2>
+        <p>The concept of the carbon footprint calculator has picked up steam in the last few years and is a classic, if not THE original example of greenwashing by a corporate giant.</p>
+        <p>The origin of the carbon footprint was seen in the 1990s, through the introduction of the concept of Ecological Footprint in Vancouver by Wackernagel and Rees. The ecological footprint was defined as the total area of land required to sustain an urban region, where more economically developed Western nations often tend to consume more than their fair share of this land. This paper was written as an analysis of how economic theory fails to account for ecology, and how models are based on “reductionist and deterministic assumptions about resources, people, firms and technology” (Wackernagel, 1998).</p>
+        <p>This concept was largely unnoticed until 2004 when British oil and gas conglomerate British Petroleum hired advertising agency Ogilvy and Mather to promote the concept of the 'Carbon Footprint' by marketing it with an online Carbon Footprint Calculator which successfully misinformed consumers about their individual consumptions, and lifestyle choices leading to climate change and the destruction of ecosystems worldwide.</p>
+        <p>Through this calculator, we wish to illustrate the innate hypocrisy of corporate greenwashing to highlight the importance of our manifesto, tenets that must be obeyed by chemical companies</p>
+    </section>
+
+    <footer>
+        <p>If our manifesto resonates with you <button onclick="window.location.href='mailto:IDGreenManifesto@proton.me'">Join Us!</button></p> 
+    </footer>
+</body>
+</html>
